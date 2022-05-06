@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="291.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.travelagency.Controller.MoreInfos">
+    <children>
+      <ImageView fx:id="back" fitHeight="292.0" fitWidth="291.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/simple-modern-blue-wavy-abstract-background_68486-14.jpg" />
+         </image>
+      </ImageView>
+        <ImageView fx:id="user" fitHeight="198.0" fitWidth="197.0" layoutX="54.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: user.png;">
+            <image>
+                <Image url="@../../../../../../Images/profil.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="18.0" layoutY="138.0" prefHeight="40.0" prefWidth="119.0" text="Full Name :" textFill="#121149">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font></Label>
+        <Label layoutX="18.0" layoutY="271.0" prefHeight="40.0" prefWidth="147.0" text="N° Passeport:" textFill="#121149">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font></Label>
+        <Label layoutX="18.0" layoutY="225.0" prefHeight="40.0" prefWidth="85.0" text="Email :" textFill="#121149">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font></Label>
+        <Label layoutX="18.0" layoutY="184.0" prefHeight="40.0" prefWidth="85.0" text="Phone :" textFill="#121149">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font></Label>
+        <Label fx:id="Fname" layoutX="132.0" layoutY="153.0" prefHeight="17.0" prefWidth="147.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font></Label>
+        <Label fx:id="phone" layoutX="132.0" layoutY="195.0" prefHeight="17.0" prefWidth="132.0" />
+        <Label fx:id="pass" layoutX="138.0" layoutY="283.0" prefHeight="17.0" prefWidth="69.0" />
+        <Label fx:id="mail" layoutX="132.0" layoutY="237.0" prefHeight="17.0" prefWidth="119.0" />
+    </children>
+</AnchorPane>

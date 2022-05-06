@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.travelagency.Controller.AdminController">
+   <children>
+      <BorderPane layoutX="14.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #ececec;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="126.0" fitWidth="149.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="656.0">
+                     <image>
+                        <Image url="@../../../../../../Images/Around_The_World-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" layoutX="152.0" layoutY="12.0" prefHeight="60.0" prefWidth="587.0">
+                     <children>
+                        <Label text="Booking Management" textFill="CORAL" underline="true">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label layoutX="120.0" layoutY="103.0" text="To cancel a booking , Please select the line of the booking you want to cancel and confirm your decision" textFill="#1a1a1b">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <AnchorPane prefHeight="476.0" prefWidth="612.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="next" layoutX="458.0" layoutY="26.0" mnemonicParsing="false" onAction="#AddHotelBooking" prefHeight="30.0" prefWidth="127.0" style="-fx-background-color: #FF7F50;" text="Add Hotel Booking" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="next" layoutX="457.0" layoutY="255.0" mnemonicParsing="false" onAction="#AddFlightBooking" prefHeight="30.0" prefWidth="129.0" style="-fx-background-color: #FF7F50;" text="Add Flight Booking" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="Tab_HotelsB" layoutX="1.0" layoutY="63.0" onMouseClicked="#selectRowBH" prefHeight="166.0" prefWidth="612.0">
+                    <columns>
+                      <TableColumn fx:id="col1" prefWidth="86.0" text="Full name" />
+                      <TableColumn fx:id="col2" prefWidth="84.0" text="N passport" />
+                        <TableColumn fx:id="col3" prefWidth="95.0" text="Hotel name" />
+                        <TableColumn fx:id="col4" prefWidth="92.0" text="Hotel adress" />
+                        <TableColumn fx:id="col5" prefWidth="131.0" text="Arrival Date" />
+                        <TableColumn fx:id="col6" prefWidth="121.0" text="Nombre of rooms" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="Tab_flightsB" layoutY="294.0" onMouseClicked="#selectRowBF" prefHeight="182.0" prefWidth="614.0">
+                     <columns>
+                        <TableColumn fx:id="Full_name" prefWidth="61.0" text="Name" />
+                        <TableColumn fx:id="N_passport" prefWidth="68.0" text="N_passport" />
+                        <TableColumn fx:id="CampanyName" prefWidth="86.0" text="CampayName" />
+                        <TableColumn fx:id="CampanyName1" prefWidth="86.0" text="From">
+                           <columns>
+                              <TableColumn fx:id="dep_time" prefWidth="98.0" text="dep_time" />
+                              <TableColumn fx:id="Dep_place" prefWidth="83.0" text="Dep_place" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="CampanyName11" prefWidth="155.0" text="To">
+                           <columns>
+                              <TableColumn fx:id="Arr_time" text="Arr_time" />
+                              <TableColumn fx:id="Arr_place" prefWidth="59.0" text="Arr_place" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="priceF" prefWidth="69.0" text="Price" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="41.0" text="--&gt; List of Hotels booking:" textFill="#1016e5">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="269.0" text="--&gt; List of Flights booking:" textFill="#1016e5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="370.0" layoutY="255.0" mnemonicParsing="false" onAction="#Cancel2" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #FF7F50;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="369.0" layoutY="26.0" mnemonicParsing="false" onAction="#Cancel1" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #FF7F50;" text="Cancel " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="warning" layoutX="21.0" layoutY="5.0" textFill="#e32210">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="warning2" layoutX="20.0" layoutY="231.0" textFill="#e32210">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </right>
+         <left>
+            <AnchorPane prefHeight="476.0" prefWidth="171.0" style="-fx-background-color: #121149;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="476.0" prefWidth="171.0" style="-fx-background-color: #121149;">
+                     <children>
+                        <VBox layoutX="26.0" layoutY="81.0" prefHeight="395.0" prefWidth="171.0" style="-fx-background-color: #121149;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="81.0">
+                           <children>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#move_flights" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #121149;" styleClass="sidebarItem" text="Flights Management" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="flight" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Images/Flight.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#move_hotels" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #121149;" styleClass="sidebarItem" text="Hotels Management" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="hotel" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Images/Hotel.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#move_clients" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #121149;" styleClass="sidebarItem" text="Clients Management" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="client" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Images/Client.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#move_booking" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #1e1d86;" styleClass="sidebarItem" text="Booking Management" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="reserver" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Images/booking.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

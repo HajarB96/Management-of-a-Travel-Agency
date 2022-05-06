@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="782.0"  xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.travelagency.Controller.AdminController">
+   <children>
+      <BorderPane layoutX="14.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #ececec;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="126.0" fitWidth="149.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="656.0">
+                     <image>
+                        <Image url="@../../../../../../Images/Around_The_World-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" layoutX="152.0" layoutY="12.0" prefHeight="100.0" prefWidth="598.0">
+                     <children>
+                        <Label text="Clients Management" textFill="CORAL" underline="true">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label text="   Add a Client" textFill="#2a28ab">
+                           <font>
+                              <Font name="Arial Narrow" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="476.0" prefWidth="171.0" style="-fx-background-color: #121149;">
+                     <children>
+                        <VBox layoutX="26.0" layoutY="81.0" prefHeight="395.0" prefWidth="171.0" style="-fx-background-color: #121149;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="81.0">
+                           <children>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#move_flights" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #121149;" styleClass="sidebarItem" text="Flights Management" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="flight" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Images/Flight.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#move_hotels" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #121149;" styleClass="sidebarItem" text="Hotels Management" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="hotel" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Images/Hotel.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#move_clients" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #1e1d86;" styleClass="sidebarItem" text="Clients Management" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="client" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Images/Client.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#move_booking" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #121149;" styleClass="sidebarItem" text="Booking Management" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="reserver" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Images/booking.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="476.0" prefWidth="612.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="423.0" layoutY="362.0" mnemonicParsing="false" onAction="#backC" prefHeight="37.0" prefWidth="98.0" style="-fx-background-color: #68b4ed;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="291.0" layoutY="362.0" mnemonicParsing="false" onAction="#clearClient" prefHeight="37.0" prefWidth="98.0" style="-fx-background-color: #1958bd;" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="153.0" layoutY="279.0" text="Password :">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="password" layoutX="283.0" layoutY="274.0" prefHeight="26.0" prefWidth="173.0" />
+                  <Button layoutX="161.0" layoutY="362.0" mnemonicParsing="false" onAction="#AddC" prefHeight="37.0" prefWidth="98.0" style="-fx-background-color: #121149;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+      <Label layoutX="319.0" layoutY="219.0" text="Full Name :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="267.0" text="Phone :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="322.0" layoutY="313.0" text="Email :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="322.0" layoutY="360.0" text="N° Passeport :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fullname" layoutX="455.0" layoutY="214.0" prefHeight="26.0" prefWidth="173.0" />
+      <TextField fx:id="phone" layoutX="455.0" layoutY="262.0" prefHeight="26.0" prefWidth="173.0" />
+      <TextField fx:id="passport" layoutX="455.0" layoutY="355.0" prefHeight="26.0" prefWidth="173.0" />
+      <TextField fx:id="email" layoutX="455.0" layoutY="308.0" prefHeight="26.0" prefWidth="173.0" />
+   </children>
+</AnchorPane>
